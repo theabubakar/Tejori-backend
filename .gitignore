@@ -1,0 +1,21 @@
+## Build artifacts
+bin/
+obj/
+out/
+
+## IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+## Tools
+.dotnet/
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Secrets
+appsettings.*.local.json
+*.pfx

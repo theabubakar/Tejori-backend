@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Tijori.API/Tijori.API.csproj" />
+    <Project Path="src/Tijori.Application/Tijori.Application.csproj" />
+    <Project Path="src/Tijori.Domain/Tijori.Domain.csproj" />
+    <Project Path="src/Tijori.Infrastructure/Tijori.Infrastructure.csproj" />
+  </Folder>
+</Solution>
