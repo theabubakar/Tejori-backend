@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tijori.Application.Common;
 using Tijori.Application.DTOs.Auth;
@@ -5,6 +6,7 @@ using Tijori.Application.Interfaces.Services;
 
 namespace Tijori.API.Controllers;
 
+[AllowAnonymous]
 [ApiController]
 [Route("api/auth")]
 public class AuthController : ControllerBase

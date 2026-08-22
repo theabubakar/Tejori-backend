@@ -26,7 +26,18 @@ public static class DependencyInjection
         services.AddScoped<IOtpVerificationRepository, OtpVerificationRepository>();
         services.AddScoped<IPasswordResetSessionRepository, PasswordResetSessionRepository>();
         services.AddScoped<IUserLoginRepository, UserLoginRepository>();
+        services.AddScoped<IUserStorageRepository, UserStorageRepository>();
+        services.AddScoped<IBucketCategoryRepository, BucketCategoryRepository>();
+        services.AddScoped<ICategoryFormFieldRepository, CategoryFormFieldRepository>();
+        services.AddScoped<IUserBucketRepository, UserBucketRepository>();
+        services.AddScoped<IProjectRepository, ProjectRepository>();
+        services.AddScoped<IProjectDocumentRepository, ProjectDocumentRepository>();
+        services.AddScoped<IMilestoneRepository, MilestoneRepository>();
+        services.AddScoped<IPaymentAlertRepository, PaymentAlertRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        services.AddSingleton<IUploadedFileStore, UploadedFileStore>();
+        services.AddScoped<IFileStorageService, LocalFileStorageService>();
 
         services.AddScoped<IPasswordHasher, PasswordHasher>();
         services.AddScoped<IOtpHasher, OtpHasher>();
