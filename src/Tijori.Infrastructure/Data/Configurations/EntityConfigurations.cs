@@ -27,6 +27,17 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.PasswordHash)
             .HasMaxLength(512);
 
+        builder.Property(x => x.ProfileImageUrl)
+            .HasMaxLength(512);
+
+        builder.Property(x => x.Language)
+            .HasMaxLength(20)
+            .HasDefaultValue("ENGLISH");
+
+        builder.Property(x => x.NotificationPreference)
+            .HasMaxLength(50)
+            .HasDefaultValue("ALL");
+
         builder.HasIndex(x => x.Email)
             .IsUnique()
             .HasFilter("[Email] IS NOT NULL");
